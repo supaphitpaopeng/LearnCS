@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -129,6 +130,50 @@ namespace LearnCS
                 else Console.WriteLine($"{x} == {y}");            
             }
             NumberCompare(20, 50);
+
+            //Player p1 = new Player();
+            List<Player> players = new List<Player>();
+
+            for (int i = 0; i < 5; i++)
+            {
+                players.Add(new Player());
+            }
+
+            players.Add(new Player("Por", 100));
+            players.Add(new Player("Gai", 50));
+            players.Add(new Player("Jor", 40));
+            //iplayers.Add(new Player());
+            /* players[0].Name = "Por";
+            players[0].Level = 100;
+            players[1].Name = "Gai";
+            players[1].Level = 50;
+            players[2].Name = "Jor";
+            players[2].Level = 40; */
+
+            foreach (Player pl in players)
+                Console.WriteLine($"Player name: {pl.Name}, Level: {pl.Level}");
+        }
+    }
+    class Player
+    {
+        string name;
+        int level;
+
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+        public int Level
+        {
+            get { return level; }
+            set { level = value; }
+        }
+        // constructor
+        public Player(string name = "Unknow", int level = 1)
+        {
+            this .name = name;  
+            this .level = level;
         }
     }
 }
