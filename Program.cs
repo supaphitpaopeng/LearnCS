@@ -103,6 +103,32 @@ namespace LearnCS
             {
                 Console.WriteLine($"Car: {car}");
             }
+            // function
+            string Hello(string name = "Noname")
+            {
+                return $"Hellow, {name}!";
+            }
+            /*tring h = Hello();
+            Console.WriteLine(h); */
+            Console.WriteLine(Hello("Por"));
+            Console.WriteLine(Hello());
+
+            /*string NumberCompare(int x, int y)
+            {
+                if (x > y) return $"{x} > {y}";
+                else if (x < y) return $"{x} < {y}";
+                else return $"{x} == {y}";
+
+            }
+            Console.WriteLine(NumberCompare(50, 50)); */
+
+            void NumberCompare(int x, int y)
+            {
+                if (x > y) Console.WriteLine($"{x} > {y}");
+                else if (x < y) Console.WriteLine($"{x} < {y}");
+                else Console.WriteLine($"{x} == {y}");            
+            }
+            NumberCompare(20, 50);
         }
     }
 }
